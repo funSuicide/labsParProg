@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <stdio.h>
+#include <omp.h>
 #include <chrono>
 
 using namespace std;
@@ -40,6 +41,7 @@ vector<vector<int>> multiplicationMatrix(vector<vector<int>>& src1, vector<vecto
 		vector<int> tmp(col2);
 		result.push_back(tmp);
 		result[i].reserve(col2);
+		#pragma omp parallel for num_threads(8)
 		for (int j = 0; j < col2; j++) {
 			result[i][j] = 0;
 			for (int k = 0; k < col1; k++) {
