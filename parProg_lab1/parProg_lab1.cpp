@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 	int i = 0;
-	int n = 2048;
+	int n = 1024;
 	int countProcs, rank, size;
 	double time, start, end;
 
@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
 	fwrite(result, sizeof(int), size * size, Write);
 	fclose(Write);
 	delete[] result;
-	std::cout << "Time: " << (end - start) * 1000 << std::endl;
+	std::cout << "Time: " << (end - start)  << std::endl;
 	return 0;
 }
 
