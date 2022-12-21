@@ -143,6 +143,12 @@
   <ItemGroup>
     <ClCompile Include="parProg_lab1.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="matMulGPU.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mainGPU.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
